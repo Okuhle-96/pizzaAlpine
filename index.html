@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+  <link rel="stylesheet" href="./css/grid.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Pizza Pamphlet AlpineJS</title>
+</head>
+
+<body>
+  <script>
+    let smallPizza
+    let mediumPizza
+    let largePizza
+    let smallPizzaTotal
+    let mediumPizzaTotal
+    let largePizzaTotal
+</script>
+  <div class="container" x-data="{ small: 0, medium: 0, large: 0 }">
+    <div>
+      <h1 class="center">The Perfect Pizza</h1>
+    </div>
+
+    <div class="center col-12-sm cart">
+
+      <div class="head center col-1-sm left">
+       
+        C<br>
+        <br>
+        A<br>
+        <br>
+        R<br>
+        <br>
+        T<br>
+
+
+
+      </div>
+
+      <div class="cart-items center col-9-sm">
+
+        <table >
+          <thead class="th">
+            <td>Size</td>
+            <td>Price</td>
+            <td >Qty</td>
+            <td>+/-</td>
+          </thead>
+          <tr ">
+            <td>S m a l l</td>
+            <td x-text="smallPizzaTotal=smallPizza*48.99"></td>
+            <td x-text="smallPizza=small"></td>
+            <td>
+                <div>
+                  <button class="plus" @click="small++">+</button>
+                  <button class="minus" @click="small--">-</button>
+                </div>
+            </td>
+          </tr>
+
+          <tr >
+
+            <td>M e d i um</td>
+            <td x-text="mediumPizzaTotal=mediumPizza*78.99"></td>
+            <td x-text="mediumPizza=medium"></td>
+        
+            <td>
+                <div>
+                  <button class="plus" @click="medium++">+</button>
+                  <button class="minus" @click="medium--">-</button>
+                </div>
+            
+            </td>
+          </tr>
+
+          <tr >
+            <td>L a r g e</td>
+            <td x-text="largePizzaTotal=largePizza*114.99"></td>
+            <td x-text="largePizza=large"></td>
+            <td>
+                <div>
+                  <button class="plus" @click="large++">+</button>
+                  <button class="minus" @click="large--">-</button>
+                </div>
+              </td>
+            
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td></td>
+            <td></td>
+            <td><button class="btn">C h e c k o u t</button></td>
+          </tr>
+        </table>
+      </div>
+      </div>
+    <div class="specials center">
+      <div class="medium col-4-sm">
+        <div class="white">
+          <h4 class="center">M e d i u m</h4>
+          <img src="pizza.jpg" alt="">
+        </div>
+
+
+        <div class="gold">
+          <div class="price center">
+            <p>R 78.99</p>
+          </div>
+          <h5 class="center">d e s c r i p t i o n</h5>
+          <ul class="padd center">
+            <li> medium margeritha pizza</li>
+            <li>2 or less meat topping </li>
+            <li> 3 or less other toppings </li>
+
+          </ul>
+          <button class="center button" @click="medium++">O R D E R</button>
+        </div>
+      </div>
+      <div class="large col-4-sm">
+        <div class="white">
+          <h4 class="center">L a r g e</h4>
+          <img src="pizza.jpg" alt="">
+        </div>
+
+        <div class="gold">
+          <div class="price center">
+            <p>R 114.99</p>
+          </div>
+          <h5 class="center">d e s c r i p t i o n</h5>
+          <ul class="padd center">
+            <li>large margeritha pizza</li>
+            <li>3 meat toppings max </li>
+            <li>less other toppings </li>
+
+
+          </ul>
+          <button class="center button" @click="large++">O R D E R</button>
+        </div>
+
+      </div>
+      <div class="small col-4-sm">
+        <div class="white">
+          <h4 class="center">S m a l l</h4>
+          <img src="pizza.jpg" alt="">
+        </div>
+
+        <div class="gold">
+          <div class="price center">
+            <p>R 48.99</p>
+          </div>
+          <h5 class="center">d e s c r i p t i o n</h5>
+          <ul class="padd center">
+
+            <li>small margeritha pizza</li>
+            <li>1 meat topping</li>
+            <li>less other toppings</li>
+
+          </ul>
+
+          <button class="center button" @click="small++">O R D E R</button>
+        </div>
+
+      </div>
+    </div>
+    <div class="footer col-11-sm">
+      <div class="contact">
+        <li>
+          <strong>Contact us at:</strong>
+          (021)-541-1000
+          <strong>twitter /facebook /instagram </strong> @perfectpizza
+        </li>
+
+
+      </div>
+      <div class="address">
+        <li> Pizza Plaza</li>
+        <li> Dough Road</li>
+        <li>Base Town</li>
+        <li>7890</li>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
